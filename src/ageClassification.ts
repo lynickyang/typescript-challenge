@@ -13,5 +13,13 @@
 export function classifyAge(age: number): string {
     // 請在此處寫下你的程式碼
 
-    git測試
+    if (age <= 12) {
+        return 'Child';
+    } else if (age >= 13 && age <= 17) {
+        return 'Teenager';
+    } else if (age >= 18 && age <= 64) {
+        return 'Adult';
+    } else {
+        return 'Senior';
+    }
 }
