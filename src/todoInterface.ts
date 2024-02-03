@@ -12,8 +12,20 @@
  * 輸入: ([{ id: 1, task: 'Buy milk', completed: false }], 'Walk the dog')
  * 輸出: [{ id: 1, task: 'Buy milk', completed: false }, { id: 2, task: 'Walk the dog', completed: false }]
  */
+interface Todo {
+    id: number;
+    task: string;
+    completed: boolean;
+}
 
 export function addTodo(todos: Todo[], task: string): Todo[] {
-    // 在此實現函式
+    const newId = todos.length + 1;
+
+    const newTodo: Todo = {
+        id: newId,
+        task: task,
+        completed: false
+    };
+
     return [...todos, newTodo];
 }
